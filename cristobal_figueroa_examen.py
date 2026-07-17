@@ -17,7 +17,7 @@ inventario = {
 }
 
 def leer_opcion():
-    """Solicita la opción y valida que sea un entero entre 1 y 6."""
+
     while True:
         try:
             opcion = int(input("Ingrese opción: "))
@@ -29,7 +29,7 @@ def leer_opcion():
             print("Debe seleccionar una opción válida")
 
 def stock_plataforma(plataforma, dicc_juegos, dicc_inventario):
-    """Suma el stock de los juegos que pertenecen a la plataforma dada."""
+
     total_stock = 0
     
     for codigo in dicc_juegos.keys():
@@ -144,7 +144,7 @@ def agregar_juego(codigo, titulo, plataforma, genero, clasificacion, multiplayer
 
 
 def eliminar_juego(codigo, dicc_juegos, dicc_inventario):
-    """Busca el código y lo elimina de ambos diccionarios si existe."""
+
     for k in dicc_juegos.keys():
         if k.upper() == codigo.upper():
             del dicc_juegos[k]
